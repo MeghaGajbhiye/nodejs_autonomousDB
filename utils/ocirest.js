@@ -10,8 +10,11 @@ function process( auth, options, callback) {
     body = options.body;
   else
     body = JSON.stringify( options.body );
+    console.log("body is");
+    console.log(options.body);
   delete options.body;
-
+  console.log("option is");
+  console.log(options);
   // begin https request
   var request = https.request( options, handleResponse(callback) );
 
@@ -83,12 +86,14 @@ function handleResponse( callback ) {
 
 
 function buildHeaders( possibleHeaders, options, bString ){
+  console.log("Inside");
   var headers = {};
   headers['content-type'] = bString ? 'application/x-www-form-urlencoded' : 'application/json';
   headers['user-agent'] = 'Mozilla/5.0';
   for( var i=0; i<possibleHeaders.length; i++ )
       if ( possibleHeaders[i].toLowerCase() in options )
-        headers[possibleHeaders[i].toLowerCase()] = options[possibleHeaders[i]];
+	headers[possibleHeaders[i].toLowerCase()] = options[possibleHeaders[i]];
+  console.log(headers );	
   return headers;
 };
 
@@ -97,6 +102,7 @@ function buildQueryString( possibleQuery, options ){
   for ( var i=0; i<possibleQuery.length; i++ )
     if ( possibleQuery[i] in options )
       query += (query=='' ? '?' : '&' ) + possibleQuery[i] + '=' + encodeURIComponent(options[possibleQuery[i]]);
+  console.log(query);
   return query;
 };
 
