@@ -8,13 +8,13 @@ Oracle Cloud Infrastructure REST APIs implemented in node.js to list, create, de
 
 - Change the following in this part of the code: 
 
-  var auth={
-    tenancyId : 'ocid1.tenancy.oc1..aaaaaaaa3hjb76kw5fmhm6y4tcl5whv2uer6fz2bbfctfxvbdrtwddfdo6qq',
-    userId : 'ocid1.user.oc1..aaaaaaaaot7m2xmy4kk55bltdtuyt32eaht7s7aoc2le6ui4xgg56qcw272a',
-    keyFingerprint : 'a1:84:3b:8a:28:8a:d6:dc:8e:28:33:26:a6:bf:1b:a9',
-    RESTversion : '/20160918',
-    region: 'eu-frankfurt-1'
-  };
+  var auth={  
+    tenancyId : 'ocid1.tenancy.oc1..aaaaaaaa3hjb76kw5fmhm6y4tcl5whv2uer6fz2bbfctfxvbdrtwddfdo6qq',  
+    userId : 'ocid1.user.oc1..aaaaaaaaot7m2xmy4kk55bltdtuyt32eaht7s7aoc2le6ui4xgg56qcw272a',  
+    keyFingerprint : 'a1:84:3b:8a:28:8a:d6:dc:8e:28:33:26:a6:bf:1b:a9',  
+    RESTversion : '/20160918',  
+    region: 'eu-frankfurt-1'  
+  };  
   
   1. tenancyId : Your Tenancy OCID
   2. userID : Your user OCID
