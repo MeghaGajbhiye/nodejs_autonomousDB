@@ -11,6 +11,8 @@ Oracle Cloud Infrastructure REST APIs implemented in node.js to list, and update
 
 ## Change the following parameters:
 
+Navigate to test.js and change a few parameters:
+
 - Change the following in this part of the code: 
 
   **var auth={  
