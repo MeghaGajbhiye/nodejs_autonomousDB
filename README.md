@@ -55,11 +55,11 @@ you should be able to see all the autonomous database running in your instance.
 Uncomment the following part of the code:
 
 **var tags = { "freeformTags" : {"tag1": 123456, "tag2": "yyy", "anotherTag": "aaa" }};  
-parameters = {  
+  parameters = {  
     body : tags,  
     autonomousDataWarehouseId : adwId  
 }  
-oci.database.autonomousDataWarehouse.update( auth, parameters, callback );  **
+oci.database.autonomousDataWarehouse.update( auth, parameters, callback );**  
 
 And change the following parameter: 
 
